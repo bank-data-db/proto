@@ -308,7 +308,7 @@ func (x *Card) GetName() string {
 	return ""
 }
 
-func (x *Card) SetId(v string) {
+func (x *Card) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
@@ -318,7 +318,7 @@ func (x *Card) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 2)
 }
 
-func (x *Card) HasId() bool {
+func (x *Card) HasID() bool {
 	if x == nil {
 		return false
 	}

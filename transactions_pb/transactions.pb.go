@@ -165,7 +165,7 @@ func (x *ReqList) SetDescending(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 5)
 }
 
-func (x *ReqList) SetCardId(v string) {
+func (x *ReqList) SetCardID(v string) {
 	x.xxx_hidden_CardId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 5)
 }
@@ -198,7 +198,7 @@ func (x *ReqList) HasDescending() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 3)
 }
 
-func (x *ReqList) HasCardId() bool {
+func (x *ReqList) HasCardID() bool {
 	if x == nil {
 		return false
 	}
@@ -505,12 +505,12 @@ func (x *Transaction) GetResolvedCategoryID() string {
 	return ""
 }
 
-func (x *Transaction) SetId(v string) {
+func (x *Transaction) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 8)
 }
 
-func (x *Transaction) SetCardId(v string) {
+func (x *Transaction) SetCardID(v string) {
 	x.xxx_hidden_CardId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 8)
 }
@@ -540,19 +540,19 @@ func (x *Transaction) SetResolvedName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 8)
 }
 
-func (x *Transaction) SetResolvedCategoryId(v string) {
+func (x *Transaction) SetResolvedCategoryID(v string) {
 	x.xxx_hidden_ResolvedCategoryId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 7, 8)
 }
 
-func (x *Transaction) HasId() bool {
+func (x *Transaction) HasID() bool {
 	if x == nil {
 		return false
 	}
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 0)
 }
 
-func (x *Transaction) HasCardId() bool {
+func (x *Transaction) HasCardID() bool {
 	if x == nil {
 		return false
 	}
@@ -594,7 +594,7 @@ func (x *Transaction) HasResolvedName() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 6)
 }
 
-func (x *Transaction) HasResolvedCategoryId() bool {
+func (x *Transaction) HasResolvedCategoryID() bool {
 	if x == nil {
 		return false
 	}
@@ -811,7 +811,7 @@ func (x *ReqNew) GetDoNotResolve() bool {
 	return false
 }
 
-func (x *ReqNew) SetCardId(v string) {
+func (x *ReqNew) SetCardID(v string) {
 	x.xxx_hidden_CardId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 8)
 }
@@ -841,7 +841,7 @@ func (x *ReqNew) SetResolvedName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 8)
 }
 
-func (x *ReqNew) SetResolvedCategoryId(v string) {
+func (x *ReqNew) SetResolvedCategoryID(v string) {
 	x.xxx_hidden_ResolvedCategoryId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 8)
 }
@@ -851,7 +851,7 @@ func (x *ReqNew) SetDoNotResolve(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 7, 8)
 }
 
-func (x *ReqNew) HasCardId() bool {
+func (x *ReqNew) HasCardID() bool {
 	if x == nil {
 		return false
 	}
@@ -893,7 +893,7 @@ func (x *ReqNew) HasResolvedName() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 5)
 }
 
-func (x *ReqNew) HasResolvedCategoryId() bool {
+func (x *ReqNew) HasResolvedCategoryID() bool {
 	if x == nil {
 		return false
 	}
@@ -1073,7 +1073,7 @@ func (x *RespNew) GetResolvedCategoryID() string {
 	return ""
 }
 
-func (x *RespNew) SetId(v string) {
+func (x *RespNew) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 3)
 }
@@ -1083,12 +1083,12 @@ func (x *RespNew) SetResolvedName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *RespNew) SetResolvedCategoryId(v string) {
+func (x *RespNew) SetResolvedCategoryID(v string) {
 	x.xxx_hidden_ResolvedCategoryId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 3)
 }
 
-func (x *RespNew) HasId() bool {
+func (x *RespNew) HasID() bool {
 	if x == nil {
 		return false
 	}
@@ -1102,7 +1102,7 @@ func (x *RespNew) HasResolvedName() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 1)
 }
 
-func (x *RespNew) HasResolvedCategoryId() bool {
+func (x *RespNew) HasResolvedCategoryID() bool {
 	if x == nil {
 		return false
 	}
@@ -1217,7 +1217,7 @@ func (x *ReqUpdate) GetResolvedCategoryID() string {
 	return ""
 }
 
-func (x *ReqUpdate) SetId(v string) {
+func (x *ReqUpdate) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 3)
 }
@@ -1227,12 +1227,12 @@ func (x *ReqUpdate) SetResolvedName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *ReqUpdate) SetResolvedCategoryId(v string) {
+func (x *ReqUpdate) SetResolvedCategoryID(v string) {
 	x.xxx_hidden_ResolvedCategoryId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 3)
 }
 
-func (x *ReqUpdate) HasId() bool {
+func (x *ReqUpdate) HasID() bool {
 	if x == nil {
 		return false
 	}
@@ -1246,7 +1246,7 @@ func (x *ReqUpdate) HasResolvedName() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 1)
 }
 
-func (x *ReqUpdate) HasResolvedCategoryId() bool {
+func (x *ReqUpdate) HasResolvedCategoryID() bool {
 	if x == nil {
 		return false
 	}

@@ -143,7 +143,7 @@ func (x *ReqList) SetPaginationToken(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *ReqList) SetCardId(v string) {
+func (x *ReqList) SetCardID(v string) {
 	x.xxx_hidden_CardId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 3)
 }
@@ -162,7 +162,7 @@ func (x *ReqList) HasPaginationToken() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 1)
 }
 
-func (x *ReqList) HasCardId() bool {
+func (x *ReqList) HasCardID() bool {
 	if x == nil {
 		return false
 	}
@@ -457,7 +457,7 @@ func (x *ReqNew) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 8)
 }
 
-func (x *ReqNew) SetResultCategoryId(v string) {
+func (x *ReqNew) SetResultCategoryID(v string) {
 	x.xxx_hidden_ResultCategoryId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 8)
 }
@@ -482,7 +482,7 @@ func (x *ReqNew) SetMatchAmount(v float64) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 8)
 }
 
-func (x *ReqNew) SetMatchCardId(v string) {
+func (x *ReqNew) SetMatchCardID(v string) {
 	x.xxx_hidden_MatchCardId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 8)
 }
@@ -499,7 +499,7 @@ func (x *ReqNew) HasName() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 0)
 }
 
-func (x *ReqNew) HasResultCategoryId() bool {
+func (x *ReqNew) HasResultCategoryID() bool {
 	if x == nil {
 		return false
 	}
@@ -534,7 +534,7 @@ func (x *ReqNew) HasMatchAmount() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 5)
 }
 
-func (x *ReqNew) HasMatchCardId() bool {
+func (x *ReqNew) HasMatchCardID() bool {
 	if x == nil {
 		return false
 	}
@@ -715,7 +715,7 @@ func (x *RespNew) GetMappedCategories() uint32 {
 	return 0
 }
 
-func (x *RespNew) SetId(v string) {
+func (x *RespNew) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -735,7 +735,7 @@ func (x *RespNew) SetMappedCategories(v uint32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 4)
 }
 
-func (x *RespNew) HasId() bool {
+func (x *RespNew) HasID() bool {
 	if x == nil {
 		return false
 	}
@@ -944,7 +944,7 @@ func (x *Mapping) GetPriority() int32 {
 	return 0
 }
 
-func (x *Mapping) SetId(v string) {
+func (x *Mapping) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 9)
 }
@@ -954,7 +954,7 @@ func (x *Mapping) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 9)
 }
 
-func (x *Mapping) SetResultCategoryId(v string) {
+func (x *Mapping) SetResultCategoryID(v string) {
 	x.xxx_hidden_ResultCategoryId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 9)
 }
@@ -979,7 +979,7 @@ func (x *Mapping) SetMatchAmount(v float64) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 9)
 }
 
-func (x *Mapping) SetMatchCardId(v string) {
+func (x *Mapping) SetMatchCardID(v string) {
 	x.xxx_hidden_MatchCardId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 7, 9)
 }
@@ -989,7 +989,7 @@ func (x *Mapping) SetPriority(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 8, 9)
 }
 
-func (x *Mapping) HasId() bool {
+func (x *Mapping) HasID() bool {
 	if x == nil {
 		return false
 	}
@@ -1003,7 +1003,7 @@ func (x *Mapping) HasName() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 1)
 }
 
-func (x *Mapping) HasResultCategoryId() bool {
+func (x *Mapping) HasResultCategoryID() bool {
 	if x == nil {
 		return false
 	}
@@ -1038,7 +1038,7 @@ func (x *Mapping) HasMatchAmount() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 6)
 }
 
-func (x *Mapping) HasMatchCardId() bool {
+func (x *Mapping) HasMatchCardID() bool {
 	if x == nil {
 		return false
 	}
@@ -1215,7 +1215,7 @@ func (x *ReqDelete) GetOrphanTransactions() bool {
 	return false
 }
 
-func (x *ReqDelete) SetId(v string) {
+func (x *ReqDelete) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
@@ -1225,7 +1225,7 @@ func (x *ReqDelete) SetOrphanTransactions(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 2)
 }
 
-func (x *ReqDelete) HasId() bool {
+func (x *ReqDelete) HasID() bool {
 	if x == nil {
 		return false
 	}
@@ -1506,7 +1506,7 @@ func (x *ReqUpdate) GetPriority() int32 {
 	return 0
 }
 
-func (x *ReqUpdate) SetId(v string) {
+func (x *ReqUpdate) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 9)
 }
@@ -1516,7 +1516,7 @@ func (x *ReqUpdate) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 9)
 }
 
-func (x *ReqUpdate) SetResultCategoryId(v string) {
+func (x *ReqUpdate) SetResultCategoryID(v string) {
 	x.xxx_hidden_ResultCategoryId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 9)
 }
@@ -1539,7 +1539,7 @@ func (x *ReqUpdate) SetMatchAmount(v *PatchDouble) {
 	x.xxx_hidden_MatchAmount = v
 }
 
-func (x *ReqUpdate) SetMatchCardId(v string) {
+func (x *ReqUpdate) SetMatchCardID(v string) {
 	x.xxx_hidden_MatchCardId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 7, 9)
 }
@@ -1549,7 +1549,7 @@ func (x *ReqUpdate) SetPriority(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 8, 9)
 }
 
-func (x *ReqUpdate) HasId() bool {
+func (x *ReqUpdate) HasID() bool {
 	if x == nil {
 		return false
 	}
@@ -1563,7 +1563,7 @@ func (x *ReqUpdate) HasName() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 1)
 }
 
-func (x *ReqUpdate) HasResultCategoryId() bool {
+func (x *ReqUpdate) HasResultCategoryID() bool {
 	if x == nil {
 		return false
 	}
@@ -1598,7 +1598,7 @@ func (x *ReqUpdate) HasMatchAmount() bool {
 	return x.xxx_hidden_MatchAmount != nil
 }
 
-func (x *ReqUpdate) HasMatchCardId() bool {
+func (x *ReqUpdate) HasMatchCardID() bool {
 	if x == nil {
 		return false
 	}

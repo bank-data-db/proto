@@ -69,12 +69,12 @@ func (x *RespNew) GetID() string {
 	return ""
 }
 
-func (x *RespNew) SetId(v string) {
+func (x *RespNew) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 1)
 }
 
-func (x *RespNew) HasId() bool {
+func (x *RespNew) HasID() bool {
 	if x == nil {
 		return false
 	}
@@ -148,12 +148,12 @@ func (x *ReqDelete) GetID() string {
 	return ""
 }
 
-func (x *ReqDelete) SetId(v string) {
+func (x *ReqDelete) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 1)
 }
 
-func (x *ReqDelete) HasId() bool {
+func (x *ReqDelete) HasID() bool {
 	if x == nil {
 		return false
 	}
@@ -237,7 +237,7 @@ func (x *ReqBankSheet) GetBankSheet() string {
 	return ""
 }
 
-func (x *ReqBankSheet) SetCardId(v string) {
+func (x *ReqBankSheet) SetCardID(v string) {
 	x.xxx_hidden_CardId = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
@@ -247,7 +247,7 @@ func (x *ReqBankSheet) SetBankSheet(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 2)
 }
 
-func (x *ReqBankSheet) HasCardId() bool {
+func (x *ReqBankSheet) HasCardID() bool {
 	if x == nil {
 		return false
 	}

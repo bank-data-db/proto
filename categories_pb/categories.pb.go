@@ -330,7 +330,7 @@ func (x *Category) GetIcon() string {
 	return ""
 }
 
-func (x *Category) SetId(v string) {
+func (x *Category) SetID(v string) {
 	x.xxx_hidden_Id = &v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -350,7 +350,7 @@ func (x *Category) SetIcon(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 4)
 }
 
-func (x *Category) HasId() bool {
+func (x *Category) HasID() bool {
 	if x == nil {
 		return false
 	}
