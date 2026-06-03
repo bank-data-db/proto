@@ -185,7 +185,7 @@ func (b0 ReqDelete_builder) Build() *ReqDelete {
 type ReqBankSheet struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_CardId      *string                `protobuf:"bytes,1,opt,name=card_id,json=cardId"`
-	xxx_hidden_BankSheet   *string                `protobuf:"bytes,2,opt,name=bank_sheet,json=bankSheet"`
+	xxx_hidden_BankSheet   []byte                 `protobuf:"bytes,2,opt,name=bank_sheet,json=bankSheet"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -227,14 +227,11 @@ func (x *ReqBankSheet) GetCardID() string {
 	return ""
 }
 
-func (x *ReqBankSheet) GetBankSheet() string {
+func (x *ReqBankSheet) GetBankSheet() []byte {
 	if x != nil {
-		if x.xxx_hidden_BankSheet != nil {
-			return *x.xxx_hidden_BankSheet
-		}
-		return ""
+		return x.xxx_hidden_BankSheet
 	}
-	return ""
+	return nil
 }
 
 func (x *ReqBankSheet) SetCardID(v string) {
@@ -242,8 +239,11 @@ func (x *ReqBankSheet) SetCardID(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *ReqBankSheet) SetBankSheet(v string) {
-	x.xxx_hidden_BankSheet = &v
+func (x *ReqBankSheet) SetBankSheet(v []byte) {
+	if v == nil {
+		v = []byte{}
+	}
+	x.xxx_hidden_BankSheet = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 2)
 }
 
@@ -277,7 +277,7 @@ type ReqBankSheet_builder struct {
 	// Card id this bank sheet is for
 	CardId *string
 	// The bank sheet
-	BankSheet *string
+	BankSheet []byte
 }
 
 func (b0 ReqBankSheet_builder) Build() *ReqBankSheet {
@@ -442,7 +442,7 @@ const file_bank_data_proto_rawDesc = "" +
 	"\fReqBankSheet\x12\x17\n" +
 	"\acard_id\x18\x01 \x01(\tR\x06cardId\x12\x1d\n" +
 	"\n" +
-	"bank_sheet\x18\x02 \x01(\tR\tbankSheet\"\xa6\x01\n" +
+	"bank_sheet\x18\x02 \x01(\fR\tbankSheet\"\xa6\x01\n" +
 	"\rRespBankSheet\x12)\n" +
 	"\x10new_transactions\x18\x01 \x01(\x04R\x0fnewTransactions\x125\n" +
 	"\x16duplicate_transactions\x18\x02 \x01(\x04R\x15duplicateTransactions\x123\n" +

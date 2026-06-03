@@ -27,7 +27,7 @@ message ReqBankSheet {
   // Card id this bank sheet is for
   string card_id = 1;
   // The bank sheet
-  string bank_sheet = 2;
+  bytes bank_sheet = 2;
 }
 
 message RespBankSheet {
