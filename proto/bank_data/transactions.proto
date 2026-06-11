@@ -22,6 +22,10 @@ message ReqList {
 
   // Filter by card id
   string card_id = 5;
+  // If unset, will not filter
+  // If true, will filter to only resolved (name & category)
+  // If false, will filter to only NOT resolved (name OR category is unresolved)
+  bool resolved = 6;
 }
 
 message RespList {
