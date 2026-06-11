@@ -71,6 +71,7 @@ type ReqList struct {
 	xxx_hidden_OrderBy         OrderField             `protobuf:"varint,3,opt,name=order_by,json=orderBy,enum=transactions.OrderField"`
 	xxx_hidden_Descending      bool                   `protobuf:"varint,4,opt,name=descending"`
 	xxx_hidden_CardId          *string                `protobuf:"bytes,5,opt,name=card_id,json=cardId"`
+	xxx_hidden_Resolved        bool                   `protobuf:"varint,6,opt,name=resolved"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -145,29 +146,41 @@ func (x *ReqList) GetCardID() string {
 	return ""
 }
 
+func (x *ReqList) GetResolved() bool {
+	if x != nil {
+		return x.xxx_hidden_Resolved
+	}
+	return false
+}
+
 func (x *ReqList) SetPageSize(v uint32) {
 	x.xxx_hidden_PageSize = v
-	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
+	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 6)
 }
 
 func (x *ReqList) SetPaginationToken(v string) {
 	x.xxx_hidden_PaginationToken = &v
-	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
+	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 6)
 }
 
 func (x *ReqList) SetOrderBy(v OrderField) {
 	x.xxx_hidden_OrderBy = v
-	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 5)
+	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
 
 func (x *ReqList) SetDescending(v bool) {
 	x.xxx_hidden_Descending = v
-	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 5)
+	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 6)
 }
 
 func (x *ReqList) SetCardID(v string) {
 	x.xxx_hidden_CardId = &v
-	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 5)
+	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 6)
+}
+
+func (x *ReqList) SetResolved(v bool) {
+	x.xxx_hidden_Resolved = v
+	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 6)
 }
 
 func (x *ReqList) HasPageSize() bool {
@@ -205,6 +218,13 @@ func (x *ReqList) HasCardID() bool {
 	return protoimpl.X.Present(&(x.XXX_presence[0]), 4)
 }
 
+func (x *ReqList) HasResolved() bool {
+	if x == nil {
+		return false
+	}
+	return protoimpl.X.Present(&(x.XXX_presence[0]), 5)
+}
+
 func (x *ReqList) ClearPageSize() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
 	x.xxx_hidden_PageSize = 0
@@ -230,6 +250,11 @@ func (x *ReqList) ClearCardId() {
 	x.xxx_hidden_CardId = nil
 }
 
+func (x *ReqList) ClearResolved() {
+	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 5)
+	x.xxx_hidden_Resolved = false
+}
+
 type ReqList_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
@@ -239,6 +264,10 @@ type ReqList_builder struct {
 	Descending      *bool
 	// Filter by card id
 	CardId *string
+	// If unset, will not filter
+	// If true, will filter to only resolved (name & category)
+	// If false, will filter to only NOT resolved (name OR category is unresolved)
+	Resolved *bool
 }
 
 func (b0 ReqList_builder) Build() *ReqList {
@@ -246,24 +275,28 @@ func (b0 ReqList_builder) Build() *ReqList {
 	b, x := &b0, m0
 	_, _ = b, x
 	if b.PageSize != nil {
-		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 0, 5)
+		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 0, 6)
 		x.xxx_hidden_PageSize = *b.PageSize
 	}
 	if b.PaginationToken != nil {
-		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 1, 5)
+		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 1, 6)
 		x.xxx_hidden_PaginationToken = b.PaginationToken
 	}
 	if b.OrderBy != nil {
-		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 2, 5)
+		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 2, 6)
 		x.xxx_hidden_OrderBy = *b.OrderBy
 	}
 	if b.Descending != nil {
-		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 3, 5)
+		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 3, 6)
 		x.xxx_hidden_Descending = *b.Descending
 	}
 	if b.CardId != nil {
-		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 4, 5)
+		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 4, 6)
 		x.xxx_hidden_CardId = b.CardId
+	}
+	if b.Resolved != nil {
+		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 5, 6)
+		x.xxx_hidden_Resolved = *b.Resolved
 	}
 	return m0
 }
@@ -1299,7 +1332,7 @@ var File_bank_data_transactions_proto protoreflect.FileDescriptor
 
 const file_bank_data_transactions_proto_rawDesc = "" +
 	"\n" +
-	"\x1cbank_data/transactions.proto\x12\ftransactions\"\xbf\x01\n" +
+	"\x1cbank_data/transactions.proto\x12\ftransactions\"\xdb\x01\n" +
 	"\aReqList\x12\x1b\n" +
 	"\tpage_size\x18\x01 \x01(\rR\bpageSize\x12)\n" +
 	"\x10pagination_token\x18\x02 \x01(\tR\x0fpaginationToken\x123\n" +
@@ -1307,7 +1340,8 @@ const file_bank_data_transactions_proto_rawDesc = "" +
 	"\n" +
 	"descending\x18\x04 \x01(\bR\n" +
 	"descending\x12\x17\n" +
-	"\acard_id\x18\x05 \x01(\tR\x06cardId\"\x89\x01\n" +
+	"\acard_id\x18\x05 \x01(\tR\x06cardId\x12\x1a\n" +
+	"\bresolved\x18\x06 \x01(\bR\bresolved\"\x89\x01\n" +
 	"\bRespList\x12\x1f\n" +
 	"\vtotal_count\x18\x01 \x01(\rR\n" +
 	"totalCount\x12)\n" +
