@@ -1717,6 +1717,82 @@ func (b0 ReqUpdate_builder) Build() *ReqUpdate {
 	return m0
 }
 
+type RespUpdate struct {
+	state                         protoimpl.MessageState `protogen:"opaque.v1"`
+	xxx_hidden_MappedTransactions uint32                 `protobuf:"varint,2,opt,name=mapped_transactions,json=mappedTransactions"`
+	XXX_raceDetectHookData        protoimpl.RaceDetectHookData
+	XXX_presence                  [1]uint32
+	unknownFields                 protoimpl.UnknownFields
+	sizeCache                     protoimpl.SizeCache
+}
+
+func (x *RespUpdate) Reset() {
+	*x = RespUpdate{}
+	mi := &file_bank_data_mappings_proto_msgTypes[8]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *RespUpdate) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*RespUpdate) ProtoMessage() {}
+
+func (x *RespUpdate) ProtoReflect() protoreflect.Message {
+	mi := &file_bank_data_mappings_proto_msgTypes[8]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+func (x *RespUpdate) GetMappedTransactions() uint32 {
+	if x != nil {
+		return x.xxx_hidden_MappedTransactions
+	}
+	return 0
+}
+
+func (x *RespUpdate) SetMappedTransactions(v uint32) {
+	x.xxx_hidden_MappedTransactions = v
+	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 1)
+}
+
+func (x *RespUpdate) HasMappedTransactions() bool {
+	if x == nil {
+		return false
+	}
+	return protoimpl.X.Present(&(x.XXX_presence[0]), 0)
+}
+
+func (x *RespUpdate) ClearMappedTransactions() {
+	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
+	x.xxx_hidden_MappedTransactions = 0
+}
+
+type RespUpdate_builder struct {
+	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
+
+	// Unique transaction count that this mapping is now mapping
+	MappedTransactions *uint32
+}
+
+func (b0 RespUpdate_builder) Build() *RespUpdate {
+	m0 := &RespUpdate{}
+	b, x := &b0, m0
+	_, _ = b, x
+	if b.MappedTransactions != nil {
+		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 0, 1)
+		x.xxx_hidden_MappedTransactions = *b.MappedTransactions
+	}
+	return m0
+}
+
 type PatchDouble struct {
 	state                  protoimpl.MessageState    `protogen:"opaque.v1"`
 	xxx_hidden_PatchDouble isPatchDouble_PatchDouble `protobuf_oneof:"patch_double"`
@@ -1726,7 +1802,7 @@ type PatchDouble struct {
 
 func (x *PatchDouble) Reset() {
 	*x = PatchDouble{}
-	mi := &file_bank_data_mappings_proto_msgTypes[8]
+	mi := &file_bank_data_mappings_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1738,7 +1814,7 @@ func (x *PatchDouble) String() string {
 func (*PatchDouble) ProtoMessage() {}
 
 func (x *PatchDouble) ProtoReflect() protoreflect.Message {
-	mi := &file_bank_data_mappings_proto_msgTypes[8]
+	mi := &file_bank_data_mappings_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1857,7 +1933,7 @@ func (b0 PatchDouble_builder) Build() *PatchDouble {
 type case_PatchDouble_PatchDouble protoreflect.FieldNumber
 
 func (x case_PatchDouble_PatchDouble) String() string {
-	md := file_bank_data_mappings_proto_msgTypes[8].Descriptor()
+	md := file_bank_data_mappings_proto_msgTypes[9].Descriptor()
 	if x == 0 {
 		return "not set"
 	}
@@ -1889,7 +1965,7 @@ type PatchAmountMode struct {
 
 func (x *PatchAmountMode) Reset() {
 	*x = PatchAmountMode{}
-	mi := &file_bank_data_mappings_proto_msgTypes[9]
+	mi := &file_bank_data_mappings_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1901,7 +1977,7 @@ func (x *PatchAmountMode) String() string {
 func (*PatchAmountMode) ProtoMessage() {}
 
 func (x *PatchAmountMode) ProtoReflect() protoreflect.Message {
-	mi := &file_bank_data_mappings_proto_msgTypes[9]
+	mi := &file_bank_data_mappings_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2020,7 +2096,7 @@ func (b0 PatchAmountMode_builder) Build() *PatchAmountMode {
 type case_PatchAmountMode_PatchAmountMode protoreflect.FieldNumber
 
 func (x case_PatchAmountMode_PatchAmountMode) String() string {
-	md := file_bank_data_mappings_proto_msgTypes[9].Descriptor()
+	md := file_bank_data_mappings_proto_msgTypes[10].Descriptor()
 	if x == 0 {
 		return "not set"
 	}
@@ -2103,7 +2179,10 @@ const file_bank_data_mappings_proto_rawDesc = "" +
 	"\x11match_amount_mode\x18\x06 \x01(\v2\x19.mappings.PatchAmountModeR\x0fmatchAmountMode\x128\n" +
 	"\fmatch_amount\x18\a \x01(\v2\x15.mappings.PatchDoubleR\vmatchAmount\x12\"\n" +
 	"\rmatch_card_id\x18\b \x01(\tR\vmatchCardId\x12\x1a\n" +
-	"\bpriority\x18\t \x01(\x05R\bpriority\"O\n" +
+	"\bpriority\x18\t \x01(\x05R\bpriority\"=\n" +
+	"\n" +
+	"RespUpdate\x12/\n" +
+	"\x13mapped_transactions\x18\x02 \x01(\rR\x12mappedTransactions\"O\n" +
 	"\vPatchDouble\x12\x16\n" +
 	"\x05value\x18\x01 \x01(\x01H\x00R\x05value\x12\x18\n" +
 	"\x06delete\x18\x02 \x01(\bH\x00R\x06deleteB\x0e\n" +
@@ -2120,7 +2199,7 @@ const file_bank_data_mappings_proto_rawDesc = "" +
 	"\x03LTE\x10\x04B1Z)github.com/bank-data-db/proto/mappings_pbʵ\x03\x02\b\x01b\beditionsp\xe9\az\x0epatch/go.proto"
 
 var file_bank_data_mappings_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_bank_data_mappings_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_bank_data_mappings_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
 var file_bank_data_mappings_proto_goTypes = []any{
 	(AmountMatchMode)(0),    // 0: mappings.AmountMatchMode
 	(*ReqList)(nil),         // 1: mappings.ReqList
@@ -2131,15 +2210,16 @@ var file_bank_data_mappings_proto_goTypes = []any{
 	(*ReqDelete)(nil),       // 6: mappings.ReqDelete
 	(*RespDelete)(nil),      // 7: mappings.RespDelete
 	(*ReqUpdate)(nil),       // 8: mappings.ReqUpdate
-	(*PatchDouble)(nil),     // 9: mappings.PatchDouble
-	(*PatchAmountMode)(nil), // 10: mappings.PatchAmountMode
+	(*RespUpdate)(nil),      // 9: mappings.RespUpdate
+	(*PatchDouble)(nil),     // 10: mappings.PatchDouble
+	(*PatchAmountMode)(nil), // 11: mappings.PatchAmountMode
 }
 var file_bank_data_mappings_proto_depIdxs = []int32{
 	5,  // 0: mappings.RespList.result:type_name -> mappings.Mapping
 	0,  // 1: mappings.ReqNew.match_amount_mode:type_name -> mappings.AmountMatchMode
 	0,  // 2: mappings.Mapping.match_amount_mode:type_name -> mappings.AmountMatchMode
-	10, // 3: mappings.ReqUpdate.match_amount_mode:type_name -> mappings.PatchAmountMode
-	9,  // 4: mappings.ReqUpdate.match_amount:type_name -> mappings.PatchDouble
+	11, // 3: mappings.ReqUpdate.match_amount_mode:type_name -> mappings.PatchAmountMode
+	10, // 4: mappings.ReqUpdate.match_amount:type_name -> mappings.PatchDouble
 	0,  // 5: mappings.PatchAmountMode.value:type_name -> mappings.AmountMatchMode
 	6,  // [6:6] is the sub-list for method output_type
 	6,  // [6:6] is the sub-list for method input_type
@@ -2153,11 +2233,11 @@ func file_bank_data_mappings_proto_init() {
 	if File_bank_data_mappings_proto != nil {
 		return
 	}
-	file_bank_data_mappings_proto_msgTypes[8].OneofWrappers = []any{
+	file_bank_data_mappings_proto_msgTypes[9].OneofWrappers = []any{
 		(*patchDouble_Value)(nil),
 		(*patchDouble_Delete)(nil),
 	}
-	file_bank_data_mappings_proto_msgTypes[9].OneofWrappers = []any{
+	file_bank_data_mappings_proto_msgTypes[10].OneofWrappers = []any{
 		(*patchAmountMode_Value)(nil),
 		(*patchAmountMode_Delete)(nil),
 	}
@@ -2167,7 +2247,7 @@ func file_bank_data_mappings_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_bank_data_mappings_proto_rawDesc), len(file_bank_data_mappings_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   10,
+			NumMessages:   11,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

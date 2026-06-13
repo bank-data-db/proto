@@ -139,6 +139,11 @@ message ReqUpdate {
   int32 priority = 9;
 }
 
+message RespUpdate {
+  // Unique transaction count that this mapping is now mapping
+  uint32 mapped_transactions = 2;
+}
+
 message PatchDouble {
   oneof patch_double {
     double value  = 1;

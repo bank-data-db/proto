@@ -54,7 +54,7 @@ type BankDataClient interface {
 	// Create a new mapping
 	MappingsNew(ctx context.Context, in *mappings_pb.ReqNew, opts ...grpc.CallOption) (*mappings_pb.RespNew, error)
 	// Update an existing mapping, where the existing mapping is gotten through the mapping.id
-	MappingsUpdate(ctx context.Context, in *mappings_pb.ReqUpdate, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	MappingsUpdate(ctx context.Context, in *mappings_pb.ReqUpdate, opts ...grpc.CallOption) (*mappings_pb.RespUpdate, error)
 	// Delete an existing mapping orphaning or nulling transactions
 	MappingDelete(ctx context.Context, in *mappings_pb.ReqDelete, opts ...grpc.CallOption) (*mappings_pb.RespDelete, error)
 	// List categories
@@ -113,9 +113,9 @@ func (c *bankDataClient) MappingsNew(ctx context.Context, in *mappings_pb.ReqNew
 	return out, nil
 }
 
-func (c *bankDataClient) MappingsUpdate(ctx context.Context, in *mappings_pb.ReqUpdate, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+func (c *bankDataClient) MappingsUpdate(ctx context.Context, in *mappings_pb.ReqUpdate, opts ...grpc.CallOption) (*mappings_pb.RespUpdate, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(emptypb.Empty)
+	out := new(mappings_pb.RespUpdate)
 	err := c.cc.Invoke(ctx, BankData_MappingsUpdate_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -274,7 +274,7 @@ type BankDataServer interface {
 	// Create a new mapping
 	MappingsNew(context.Context, *mappings_pb.ReqNew) (*mappings_pb.RespNew, error)
 	// Update an existing mapping, where the existing mapping is gotten through the mapping.id
-	MappingsUpdate(context.Context, *mappings_pb.ReqUpdate) (*emptypb.Empty, error)
+	MappingsUpdate(context.Context, *mappings_pb.ReqUpdate) (*mappings_pb.RespUpdate, error)
 	// Delete an existing mapping orphaning or nulling transactions
 	MappingDelete(context.Context, *mappings_pb.ReqDelete) (*mappings_pb.RespDelete, error)
 	// List categories
@@ -319,7 +319,7 @@ func (UnimplementedBankDataServer) MappingsList(context.Context, *mappings_pb.Re
 func (UnimplementedBankDataServer) MappingsNew(context.Context, *mappings_pb.ReqNew) (*mappings_pb.RespNew, error) {
 	return nil, status.Error(codes.Unimplemented, "method MappingsNew not implemented")
 }
-func (UnimplementedBankDataServer) MappingsUpdate(context.Context, *mappings_pb.ReqUpdate) (*emptypb.Empty, error) {
+func (UnimplementedBankDataServer) MappingsUpdate(context.Context, *mappings_pb.ReqUpdate) (*mappings_pb.RespUpdate, error) {
 	return nil, status.Error(codes.Unimplemented, "method MappingsUpdate not implemented")
 }
 func (UnimplementedBankDataServer) MappingDelete(context.Context, *mappings_pb.ReqDelete) (*mappings_pb.RespDelete, error) {

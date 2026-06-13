@@ -446,11 +446,11 @@ const file_bank_data_proto_rawDesc = "" +
 	"\rRespBankSheet\x12)\n" +
 	"\x10new_transactions\x18\x01 \x01(\x04R\x0fnewTransactions\x125\n" +
 	"\x16duplicate_transactions\x18\x02 \x01(\x04R\x15duplicateTransactions\x123\n" +
-	"\x15unmapped_transactions\x18\x03 \x01(\x04R\x14unmappedTransactions2\xe8\a\n" +
+	"\x15unmapped_transactions\x18\x03 \x01(\x04R\x14unmappedTransactions2\xe6\a\n" +
 	"\bBankData\x125\n" +
 	"\fMappingsList\x12\x11.mappings.ReqList\x1a\x12.mappings.RespList\x122\n" +
-	"\vMappingsNew\x12\x10.mappings.ReqNew\x1a\x11.mappings.RespNew\x12=\n" +
-	"\x0eMappingsUpdate\x12\x13.mappings.ReqUpdate\x1a\x16.google.protobuf.Empty\x12:\n" +
+	"\vMappingsNew\x12\x10.mappings.ReqNew\x1a\x11.mappings.RespNew\x12;\n" +
+	"\x0eMappingsUpdate\x12\x13.mappings.ReqUpdate\x1a\x14.mappings.RespUpdate\x12:\n" +
 	"\rMappingDelete\x12\x13.mappings.ReqDelete\x1a\x14.mappings.RespDelete\x12;\n" +
 	"\x0eCategoriesList\x12\x13.categories.ReqList\x1a\x14.categories.RespList\x122\n" +
 	"\rCategoriesNew\x12\x12.categories.ReqNew\x1a\r.main.RespNew\x12@\n" +
@@ -488,12 +488,13 @@ var file_bank_data_proto_goTypes = []any{
 	(*cards_pb.Card)(nil),             // 16: cards.Card
 	(*mappings_pb.RespList)(nil),      // 17: mappings.RespList
 	(*mappings_pb.RespNew)(nil),       // 18: mappings.RespNew
-	(*emptypb.Empty)(nil),             // 19: google.protobuf.Empty
+	(*mappings_pb.RespUpdate)(nil),    // 19: mappings.RespUpdate
 	(*mappings_pb.RespDelete)(nil),    // 20: mappings.RespDelete
 	(*categories_pb.RespList)(nil),    // 21: categories.RespList
-	(*transactions_pb.RespList)(nil),  // 22: transactions.RespList
-	(*transactions_pb.RespNew)(nil),   // 23: transactions.RespNew
-	(*cards_pb.RespList)(nil),         // 24: cards.RespList
+	(*emptypb.Empty)(nil),             // 22: google.protobuf.Empty
+	(*transactions_pb.RespList)(nil),  // 23: transactions.RespList
+	(*transactions_pb.RespNew)(nil),   // 24: transactions.RespNew
+	(*cards_pb.RespList)(nil),         // 25: cards.RespList
 }
 var file_bank_data_proto_depIdxs = []int32{
 	4,  // 0: main.BankData.MappingsList:input_type -> mappings.ReqList
@@ -515,20 +516,20 @@ var file_bank_data_proto_depIdxs = []int32{
 	2,  // 16: main.BankData.UploadBankSheet:input_type -> main.ReqBankSheet
 	17, // 17: main.BankData.MappingsList:output_type -> mappings.RespList
 	18, // 18: main.BankData.MappingsNew:output_type -> mappings.RespNew
-	19, // 19: main.BankData.MappingsUpdate:output_type -> google.protobuf.Empty
+	19, // 19: main.BankData.MappingsUpdate:output_type -> mappings.RespUpdate
 	20, // 20: main.BankData.MappingDelete:output_type -> mappings.RespDelete
 	21, // 21: main.BankData.CategoriesList:output_type -> categories.RespList
 	0,  // 22: main.BankData.CategoriesNew:output_type -> main.RespNew
-	19, // 23: main.BankData.CategoriesUpdate:output_type -> google.protobuf.Empty
-	19, // 24: main.BankData.CategoriesDelete:output_type -> google.protobuf.Empty
-	22, // 25: main.BankData.TransactionsList:output_type -> transactions.RespList
-	23, // 26: main.BankData.TransactionsNew:output_type -> transactions.RespNew
-	19, // 27: main.BankData.TransactionsUpdate:output_type -> google.protobuf.Empty
-	19, // 28: main.BankData.TransactionsDelete:output_type -> google.protobuf.Empty
-	24, // 29: main.BankData.CardsList:output_type -> cards.RespList
+	22, // 23: main.BankData.CategoriesUpdate:output_type -> google.protobuf.Empty
+	22, // 24: main.BankData.CategoriesDelete:output_type -> google.protobuf.Empty
+	23, // 25: main.BankData.TransactionsList:output_type -> transactions.RespList
+	24, // 26: main.BankData.TransactionsNew:output_type -> transactions.RespNew
+	22, // 27: main.BankData.TransactionsUpdate:output_type -> google.protobuf.Empty
+	22, // 28: main.BankData.TransactionsDelete:output_type -> google.protobuf.Empty
+	25, // 29: main.BankData.CardsList:output_type -> cards.RespList
 	0,  // 30: main.BankData.CardsNew:output_type -> main.RespNew
-	19, // 31: main.BankData.CardsUpdate:output_type -> google.protobuf.Empty
-	19, // 32: main.BankData.CardDelete:output_type -> google.protobuf.Empty
+	22, // 31: main.BankData.CardsUpdate:output_type -> google.protobuf.Empty
+	22, // 32: main.BankData.CardDelete:output_type -> google.protobuf.Empty
 	3,  // 33: main.BankData.UploadBankSheet:output_type -> main.RespBankSheet
 	17, // [17:34] is the sub-list for method output_type
 	0,  // [0:17] is the sub-list for method input_type
